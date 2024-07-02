@@ -20,7 +20,7 @@ const Signup = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     // console.log(name, email, password)
-    const response = await fetch(`http://localhost:5000/api/auth/createuser`,{
+    const response = await fetch(`https://cloudnotes-backend-2.onrender.com/api/auth/createuser`,{
       method: "PUT",
       headers:{
         "Content-Type" : "application/json",

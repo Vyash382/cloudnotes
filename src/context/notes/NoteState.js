@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
-  let host = "http://localhost:5000"
+  let host = "https://cloudnotes-backend-2.onrender.com"
   
   const [notes, setNotes] = useState([]);
   const getNotes = async()=>{
-    const response = await fetch("http://localhost:5000/api/notes/fetchallnotes",{
+    const response = await fetch("https://cloudnotes-backend-2.onrender.com/api/notes/fetchallnotes",{
       method: "GET",
       headers:{
         "Content-Type" : "application/json",
@@ -22,7 +22,7 @@ const NoteState = (props) => {
 
 
   const addNotes = async (title, description) => {
-    const response = await fetch("http://localhost:5000/api/notes/addnotes",{
+    const response = await fetch("https://cloudnotes-backend-2.onrender.com/api/notes/addnotes",{
       method: "POST",
       headers:{
         "Content-Type" : "application/json",
@@ -46,7 +46,7 @@ const NoteState = (props) => {
     // console.log(notes);
   };
   const deleteNotes = async(id) => {
-    const response = await fetch(`http://localhost:5000/api/notes/deleteNote/${id}`,{
+    const response = await fetch(`https://cloudnotes-backend-2.onrender.com/api/notes/deleteNote/${id}`,{
       method: "DELETE",
       headers:{
         "Content-Type" : "application/json",
@@ -70,7 +70,7 @@ const NoteState = (props) => {
   };
 
   const editNotes = async(id, title, description) => {
-    const response = await fetch(`http://localhost:5000/api/notes/updatenotes/${id}`,{
+    const response = await fetch(`https://cloudnotes-backend-2.onrender.com/api/notes/updatenotes/${id}`,{
       method: "PUT",
       headers:{
         "Content-Type" : "application/json",

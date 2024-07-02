@@ -8,7 +8,7 @@ const Login = (props) => {
     e.preventDefault();
     // console.log('form submitted');
     // console.log(email,password)
-    const response = await fetch(`http://localhost:5000/api/auth/login`,{
+    const response = await fetch(`https://cloudnotes-backend-2.onrender.com/api/auth/login`,{
       method: "PUT",
       headers:{
         "Content-Type" : "application/json",
